@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<consumers>
+    <!--order 四个事件-->
+    <consumer>
+        <id>order</id>
+        <eventType>com.today.api.order.scala.events.CreateOrderEventNew</eventType>
+        <service>com.today.api.order.service.OrderService2</service>
+        <version>1.0.0</version>
+        <event>com.today.api.order.events.CreateOrderEventNew</event>
+    </consumer>
+
+    <consumer>
+        <id>order</id>
+        <eventType>com.today.api.order.scala.events.CancelOrderEventNew</eventType>
+        <service>com.today.api.order.service.OrderService2</service>
+        <version>1.0.0</version>
+        <event>com.today.api.order.events.CancelOrderEventNew</event>
+    </consumer>
+
+    <consumer>
+        <id>order</id>
+        <eventType>com.today.api.order.scala.events.PartRefundEventNew</eventType>
+        <service>com.today.api.order.service.OrderService2</service>
+        <version>1.0.0</version>
+        <event>com.today.api.order.events.PartRefundEventNew</event>
+    </consumer>
+
+    <consumer>
+        <id>order</id>
+        <eventType>com.today.api.order.scala.events.StoreOrderEndEventNew</eventType>
+        <service>com.today.api.order.service.OrderService2</service>
+        <version>1.0.0</version>
+        <event>com.today.api.order.events.StoreOrderEndEventNew</event>
+    </consumer>
+
+
+    <!--member 事件-->
+    <consumer>
+        <id>member</id>
+        <eventType>com.today.api.member.scala.events.MemberRegisterByWechatOpenIdEvent</eventType>
+        <service>com.today.api.member.service.MemberService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.member.events.MemberRegisterByWechatOpenIdEvent</event>
+    </consumer>
+
+
+    <consumer>
+        <id>member</id>
+        <eventType>com.today.api.member.scala.events.ConsumeFullEvent</eventType>
+        <service>com.today.api.member.service.MemberService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.member.events.ConsumeFullEvent</event>
+    </consumer>
+
+    <!--goods 事件-->
+
+    <!--商品上架事件-->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.goods.scala.events.PublishedSkuEvent</eventType>
+        <service>com.today.api.goods.service.AdminGoodsService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.goods.events.PublishedSkuEvent</event>
+    </consumer>
+
+    <!--商品下架事件-->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.goods.scala.events.UnPublishedSkuEvent</eventType>
+        <service>com.today.api.goods.service.AdminGoodsService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.goods.events.UnPublishedSkuEvent</event>
+    </consumer>
+
+    <!--创建商品后发布事件 1:创建供应商商品关联关系 2:创建商品基本售价 3:创建商品关联供应商进价信息 4:通知类目修改属性关联状态-->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.goods.scala.events.CreatedSkuEvent</eventType>
+        <service>com.today.api.goods.service.AdminGoodsService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.goods.events.CreatedSkuEvent</event>
+    </consumer>
+
+    <!-- 修改商品后发布事件 -->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.goods.scala.events.ModifiedSkuAttrEvent</eventType>
+        <service>com.today.api.goods.service.AdminGoodsService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.goods.events.ModifiedSkuAttrEvent</event>
+    </consumer>
+
+    <!--商品财务审核成功后的事件-->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.goods.scala.events.ApprovedSkuFinanceSuccessEvent</eventType>
+        <service>com.today.api.goods.service.AdminGoodsService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.goods.events.ApprovedSkuFinanceSuccessEvent</event>
+    </consumer>
+
+    <!--商品属性审核后发送事件-->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.goods.scala.events.ApprovedSkuAttrEvent</eventType>
+        <service>com.today.api.goods.service.AdminGoodsService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.goods.events.ApprovedSkuAttrEvent</event>
+    </consumer>
+
+    <!--修改当前生效标准售价事件-->
+    <consumer>
+        <id>goods</id>
+        <eventType>com.today.api.skuprice.scala.events.ModifySkuSellingPriceEvent</eventType>
+        <service>com.today.api.skuprice.service.SkuSellingPriceScheduledService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.skuprice.events.ModifySkuSellingPriceEvent</event>
+    </consumer>
+
+
+    <consumer>
+        <id>purchase</id>
+        <eventType>com.today.api.purchase.scala.events.CreateStockOrderEvent</eventType>
+        <service>com.today.api.purchase.service.PurchaseService</service>
+        <version>1.0.0</version>
+        <event>com.today.api.purchase.events.CreateStockOrderEvent</event>
+    </consumer>
+
+
+
+
+</consumers>

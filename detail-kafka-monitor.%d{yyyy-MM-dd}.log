@@ -1,0 +1,745 @@
+2018-06-10 01:22:02.797  INFO 18403 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Starting KafkaMonitorApplication on maples-mac-pro.local with PID 18403 (/Users/maple/developer/maple-learning/kafka-monitor/target/classes started by maple in /Users/maple/developer/maple-learning/kafka-monitor)
+2018-06-10 01:22:02.816  INFO 18403 --- [main] c.t.k.monitor.KafkaMonitorApplication    : No active profile set, falling back to default profiles: default
+2018-06-10 01:22:02.911  INFO 18403 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb9e6dc: startup date [Sun Jun 10 01:22:02 CST 2018]; root of context hierarchy
+2018-06-10 01:22:04.317  INFO 18403 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-06-10 01:22:04.346  INFO 18403 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-10 01:22:04.348  INFO 18403 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-10 01:22:04.353  INFO 18403 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-10 01:22:04.467  INFO 18403 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-10 01:22:04.467  INFO 18403 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1556 ms
+2018-06-10 01:22:04.617  INFO 18403 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-10 01:22:04.629  INFO 18403 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-10 01:22:04.629  INFO 18403 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-10 01:22:04.629  INFO 18403 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-10 01:22:04.629  INFO 18403 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-10 01:22:04.700  INFO 18403 --- [main] c.t.kafka.monitor.bean.MsgMeteDataBean   : zk host in the environment is not found,setting it with spring boot application, host is 10.10.10.48:2181
+2018-06-10 01:22:09.194  INFO 18403 --- [main] com.github.dapeng.openapi.utils.EnvUtil  : zkHost:10.10.10.48:2181
+2018-06-10 01:22:09.227  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2018-06-10 01:22:09.227  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=192.168.1.102
+2018-06-10 01:22:09.227  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/tools.jar:/Users/maple/developer/maple-learning/kafka-monitor/target/classes:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.2.RELEASE/spring-boot-starter-web-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.2.RELEASE/spring-boot-starter-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.2.RELEASE/spring-boot-autoconfigure-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.2.RELEASE/spring-boot-starter-logging-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/maple/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/Users/maple/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/maple/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.2.RELEASE/spring-boot-starter-json-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.5/jackson-datatype-jdk8-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.5/jackson-datatype-jsr310-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.5/jackson-module-parameter-names-2.9.5.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.2.RELEASE/spring-boot-starter-tomcat-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/Users/maple/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.9.Final/hibernate-validator-6.0.9.Final.jar:/Users/maple/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/Users/maple/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/maple/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/Users/maple/.m2/repository/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-beans/5.0.6.RELEASE/spring-beans-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-context/5.0.6.RELEASE/spring-context-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-expression/5.0.6.RELEASE/spring-expression-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-jcl/5.0.6.RELEASE/spring-jcl-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0.jar:/Users/maple/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar:/Users/maple/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.1/snappy-java-1.1.7.1.jar:/Users/maple/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/maple/.m2/repository/com/today/event-bus_2.12/0.2-SNAPSHOT/event-bus_2.12-0.2-SNAPSHOT.jar:/Users/maple/.m2/repository/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar:/Users/maple/.m2/repository/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-aspects/5.0.6.RELEASE/spring-aspects-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/scala-sql_2.12/2.0.6/scala-sql_2.12-2.0.6.jar:/Users/maple/.m2/repository/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/spray-json_2.12/1.3.4/spray-json_2.12-1.3.4.jar:/Users/maple/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/maple/.m2/repository/com/alibaba/otter/canal.protocol/1.0.25/canal.protocol-1.0.25.jar:/Users/maple/.m2/repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-open-api/2.0.2/dapeng-open-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-client-netty/2.0.2/dapeng-client-netty-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-utils/2.0.2/dapeng-utils-2.0.2.jar:/Users/maple/.m2/repository/io/netty/netty-all/4.1.24.Final/netty-all-4.1.24.Final.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-registry-zookeeper/2.0.2/dapeng-registry-zookeeper-2.0.2.jar:/Users/maple/.m2/repository/org/apache/zookeeper/zookeeper/3.4.7/zookeeper-3.4.7.jar:/Users/maple/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-container-api/2.0.2/dapeng-container-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-router/2.0.2/dapeng-router-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-json/2.0.2/dapeng-json-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-core/2.0.2/dapeng-core-2.0.2.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/maple/.m2/repository/org/codehaus/janino/janino/3.0.8/janino-3.0.8.jar:/Users/maple/.m2/repository/org/codehaus/janino/commons-compiler/3.0.8/commons-compiler-3.0.8.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar:/Users/maple/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/maple/.m2/repository/org/simpleframework/simple-xml/2.7.1/simple-xml-2.7.1.jar:/Users/maple/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/maple/.m2/repository/stax/stax/1.2.0/stax-1.2.0.jar:/Users/maple/.m2/repository/xpp3/xpp3/1.1.3.3/xpp3-1.1.3.3.jar:/Users/maple/.m2/repository/org/springframework/retry/spring-retry/1.2.2.RELEASE/spring-retry-1.2.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Users/maple/Library/Caches/IntelliJIdea2018.1/captureAgent/debugger-agent.jar
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/b3/3qln3fjx61v26zql8r7sdhg00000gn/T/
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2018-06-10 01:22:09.228  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2018-06-10 01:22:09.229  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.13.3
+2018-06-10 01:22:09.229  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=maple
+2018-06-10 01:22:09.229  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/maple
+2018-06-10 01:22:09.229  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/maple/developer/maple-learning/kafka-monitor
+2018-06-10 01:22:09.238  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$294/79620878@134c370e
+2018-06-10 01:22:09.278  INFO 18403 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:22:09.756  INFO 18403 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:22:10.300  INFO 18403 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670069, negotiated timeout = 15000
+2018-06-10 01:22:10.303  INFO 18403 --- [main] c.g.d.openapi.cache.ZookeeperClient      : wait for lock
+2018-06-10 01:22:10.303  INFO 18403 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:22:11.158  INFO 18403 --- [main] c.g.d.openapi.cache.ZookeeperClient      : [filter service]:过滤元数据信息结果:[com.today.api.order.service.OrderService2, com.today.api.skuprice.service.SkuSellingPriceScheduledService, com.today.api.goods.service.AdminGoodsService, com.today.api.purchase.service.PurchaseService, com.today.api.member.service.MemberService]
+2018-06-10 01:22:11.200  INFO 18403 --- [main] c.g.d.openapi.cache.ZookeeperClient      : 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:22:11.208  INFO 18403 --- [main] c.g.d.registry.zookeeper.WatcherUtils    : com.today.api.order.service.OrderService2   [192.168.10.6:9099:1.0.0:0000000003]
+2018-06-10 01:22:11.209  INFO 18403 --- [main] c.g.d.openapi.cache.ZookeeperClient      : 拿到服务 /soa/runtime/services/com.today.api.order.service.OrderService2 地址，开始解析服务元信息
+2018-06-10 01:22:11.210  INFO 18403 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : access loadServicesMetadata
+2018-06-10 01:22:13.232  INFO 18403 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=30000 watcher=com.github.dapeng.registry.zookeeper.ClientZk$$Lambda$303/73351708@1816e24a
+2018-06-10 01:22:13.233  INFO 18403 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:22:13.272  INFO 18403 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:22:14.891  INFO 18403 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb67006a, negotiated timeout = 30000
+2018-06-10 01:22:14.892  INFO 18403 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181  已连接 zookeeper Server
+2018-06-10 01:22:14.902  INFO 18403 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo just created, now sync with zk
+2018-06-10 01:22:14.946  INFO 18403 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::syncZkRuntimeInfo[com.today.api.order.service.OrderService2], 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:22:14.947  INFO 18403 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : <-> syncZkRuntimeInfo 触发服务实例同步，目前服务实例列表:com.today.api.order.service.OrderService2 -> IP:【192.168.10.6:9099】
+2018-06-10 01:22:14.952  INFO 18403 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2, status:ACTIVE]
+2018-06-10 01:22:14.955  INFO 18403 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo succeed
+2018-06-10 01:22:14.994  INFO 18403 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:22:14.994  INFO 18403 --- [main-EventThread] c.g.dapeng.registry.zookeeper.CommonZk   : watch 监听配置子节点成功
+2018-06-10 01:22:14.994  INFO 18403 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:22:15.003  WARN 18403 --- [main] com.github.dapeng.router.RoutesParser    : current service hava no route express config
+2018-06-10 01:22:15.004  WARN 18403 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::getRoutes routes changes:[]
+2018-06-10 01:22:45.258 ERROR 18403 --- [main] c.g.d.client.netty.SoaBaseConnection     : connect to 192.168.10.6:9099 failed
+2018-06-10 01:22:45.268  INFO 18403 --- [main] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:0, server:192.168.10.6:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:23:15.312 ERROR 18403 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : com.today.api.order.service.OrderService2:1.0.0 metadata获取出错,已尝试 1 次
+2018-06-10 01:23:15.326 ERROR 18403 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : Err-Core-002:连接失败
+
+com.github.dapeng.core.SoaException: Err-Core-002:连接失败
+	at com.github.dapeng.client.netty.SoaBaseConnection.connect(SoaBaseConnection.java:344) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.checkChannel(SoaBaseConnection.java:350) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.access$100(SoaBaseConnection.java:27) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$1.onEntry(SoaBaseConnection.java:80) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:48) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.filter.LogFilter.onEntry(LogFilter.java:52) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:46) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$2.onEntry(SoaBaseConnection.java:107) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:44) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.send(SoaBaseConnection.java:128) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaConnectionPoolImpl.send(SoaConnectionPoolImpl.java:131) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.metadata.MetadataClient.getServiceMetadata(MetadataClient.java:41) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ServiceCache.loadServicesMetadata(ServiceCache.java:128) ~[dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.getServiceByNameSync(ZookeeperClient.java:275) [dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.lambda$filterServersList$7(ZookeeperClient.java:241) [dapeng-open-api-2.0.2.jar:na]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_161]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.filterServersList(ZookeeperClient.java:241) [dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.filterInit(ZookeeperClient.java:220) [dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZkBootstrap.filterInit(ZkBootstrap.java:32) ~[dapeng-open-api-2.0.2.jar:na]
+	at com.today.kafka.monitor.bean.MsgMeteDataBean.afterPropertiesSet(MsgMeteDataBean.java:47) ~[classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1765) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at com.today.kafka.monitor.KafkaMonitorApplication.main(KafkaMonitorApplication.java:30) ~[classes/:na]
+
+2018-06-10 01:23:15.327 ERROR 18403 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : metadata获取出错
+
+com.github.dapeng.core.SoaException: Err-Core-002:连接失败
+	at com.github.dapeng.client.netty.SoaBaseConnection.connect(SoaBaseConnection.java:344) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.checkChannel(SoaBaseConnection.java:350) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.access$100(SoaBaseConnection.java:27) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$1.onEntry(SoaBaseConnection.java:80) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:48) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.filter.LogFilter.onEntry(LogFilter.java:52) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:46) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$2.onEntry(SoaBaseConnection.java:107) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:44) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.send(SoaBaseConnection.java:128) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaConnectionPoolImpl.send(SoaConnectionPoolImpl.java:131) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.metadata.MetadataClient.getServiceMetadata(MetadataClient.java:41) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ServiceCache.loadServicesMetadata(ServiceCache.java:128) ~[dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.getServiceByNameSync(ZookeeperClient.java:275) [dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.lambda$filterServersList$7(ZookeeperClient.java:241) [dapeng-open-api-2.0.2.jar:na]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[na:1.8.0_161]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.filterServersList(ZookeeperClient.java:241) [dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.filterInit(ZookeeperClient.java:220) [dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZkBootstrap.filterInit(ZkBootstrap.java:32) ~[dapeng-open-api-2.0.2.jar:na]
+	at com.today.kafka.monitor.bean.MsgMeteDataBean.afterPropertiesSet(MsgMeteDataBean.java:47) ~[classes/:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1765) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760) ~[spring-beans-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.6.RELEASE.jar:5.0.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243) ~[spring-boot-2.0.2.RELEASE.jar:2.0.2.RELEASE]
+	at com.today.kafka.monitor.KafkaMonitorApplication.main(KafkaMonitorApplication.java:30) ~[classes/:na]
+
+2018-06-10 01:23:17.334  INFO 18403 --- [main] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:1, server:192.168.10.6:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:25:52.746  INFO 18474 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Starting KafkaMonitorApplication on maples-mac-pro.local with PID 18474 (/Users/maple/developer/maple-learning/kafka-monitor/target/classes started by maple in /Users/maple/developer/maple-learning/kafka-monitor)
+2018-06-10 01:25:52.752  INFO 18474 --- [main] c.t.k.monitor.KafkaMonitorApplication    : No active profile set, falling back to default profiles: default
+2018-06-10 01:25:53.143  INFO 18474 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69f1a286: startup date [Sun Jun 10 01:25:53 CST 2018]; root of context hierarchy
+2018-06-10 01:25:55.184  INFO 18474 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-06-10 01:25:55.212  INFO 18474 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-10 01:25:55.212  INFO 18474 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-10 01:25:55.216  INFO 18474 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-10 01:25:55.315  INFO 18474 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-10 01:25:55.315  INFO 18474 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2173 ms
+2018-06-10 01:25:55.506  INFO 18474 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-10 01:25:55.519  INFO 18474 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-10 01:25:55.519  INFO 18474 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-10 01:25:55.520  INFO 18474 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-10 01:25:55.520  INFO 18474 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-10 01:25:55.581  INFO 18474 --- [main] c.t.kafka.monitor.bean.MsgMeteDataBean   : zk host in the environment is not found,setting it with spring boot application, host is 10.10.10.48:2181
+2018-06-10 01:25:57.748  INFO 18474 --- [main] com.github.dapeng.openapi.utils.EnvUtil  : zkHost:10.10.10.48:2181
+2018-06-10 01:25:57.759  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2018-06-10 01:25:57.759  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=192.168.1.102
+2018-06-10 01:25:57.759  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-06-10 01:25:57.759  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/tools.jar:/Users/maple/developer/maple-learning/kafka-monitor/target/classes:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.2.RELEASE/spring-boot-starter-web-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.2.RELEASE/spring-boot-starter-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.2.RELEASE/spring-boot-autoconfigure-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.2.RELEASE/spring-boot-starter-logging-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/maple/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/Users/maple/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/maple/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.2.RELEASE/spring-boot-starter-json-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.5/jackson-datatype-jdk8-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.5/jackson-datatype-jsr310-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.5/jackson-module-parameter-names-2.9.5.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.2.RELEASE/spring-boot-starter-tomcat-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/Users/maple/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.9.Final/hibernate-validator-6.0.9.Final.jar:/Users/maple/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/Users/maple/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/maple/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/Users/maple/.m2/repository/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-beans/5.0.6.RELEASE/spring-beans-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-context/5.0.6.RELEASE/spring-context-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-expression/5.0.6.RELEASE/spring-expression-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-jcl/5.0.6.RELEASE/spring-jcl-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0.jar:/Users/maple/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar:/Users/maple/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.1/snappy-java-1.1.7.1.jar:/Users/maple/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/maple/.m2/repository/com/today/event-bus_2.12/0.2-SNAPSHOT/event-bus_2.12-0.2-SNAPSHOT.jar:/Users/maple/.m2/repository/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar:/Users/maple/.m2/repository/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-aspects/5.0.6.RELEASE/spring-aspects-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/scala-sql_2.12/2.0.6/scala-sql_2.12-2.0.6.jar:/Users/maple/.m2/repository/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/spray-json_2.12/1.3.4/spray-json_2.12-1.3.4.jar:/Users/maple/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/maple/.m2/repository/com/alibaba/otter/canal.protocol/1.0.25/canal.protocol-1.0.25.jar:/Users/maple/.m2/repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-open-api/2.0.2/dapeng-open-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-client-netty/2.0.2/dapeng-client-netty-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-utils/2.0.2/dapeng-utils-2.0.2.jar:/Users/maple/.m2/repository/io/netty/netty-all/4.1.24.Final/netty-all-4.1.24.Final.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-registry-zookeeper/2.0.2/dapeng-registry-zookeeper-2.0.2.jar:/Users/maple/.m2/repository/org/apache/zookeeper/zookeeper/3.4.7/zookeeper-3.4.7.jar:/Users/maple/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-container-api/2.0.2/dapeng-container-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-router/2.0.2/dapeng-router-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-json/2.0.2/dapeng-json-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-core/2.0.2/dapeng-core-2.0.2.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/maple/.m2/repository/org/codehaus/janino/janino/3.0.8/janino-3.0.8.jar:/Users/maple/.m2/repository/org/codehaus/janino/commons-compiler/3.0.8/commons-compiler-3.0.8.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar:/Users/maple/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/maple/.m2/repository/org/simpleframework/simple-xml/2.7.1/simple-xml-2.7.1.jar:/Users/maple/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/maple/.m2/repository/stax/stax/1.2.0/stax-1.2.0.jar:/Users/maple/.m2/repository/xpp3/xpp3/1.1.3.3/xpp3-1.1.3.3.jar:/Users/maple/.m2/repository/org/springframework/retry/spring-retry/1.2.2.RELEASE/spring-retry-1.2.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Users/maple/Library/Caches/IntelliJIdea2018.1/captureAgent/debugger-agent.jar
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/b3/3qln3fjx61v26zql8r7sdhg00000gn/T/
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.13.3
+2018-06-10 01:25:57.760  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=maple
+2018-06-10 01:25:57.761  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/maple
+2018-06-10 01:25:57.761  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/maple/developer/maple-learning/kafka-monitor
+2018-06-10 01:25:57.762  INFO 18474 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$295/909786389@7ee3d262
+2018-06-10 01:25:57.790  INFO 18474 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:25:58.817  INFO 18474 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:25:59.114  INFO 18474 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb67006e, negotiated timeout = 15000
+2018-06-10 01:25:59.117  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:25:59.117  INFO 18474 --- [main] c.g.d.openapi.cache.ZookeeperClient      : wait for lock
+2018-06-10 01:25:59.169  INFO 18474 --- [main] c.g.d.openapi.cache.ZookeeperClient      : [filter service]:过滤元数据信息结果:[com.today.api.order.service.OrderService2]
+2018-06-10 01:25:59.210  INFO 18474 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : map 为空，不需要进行移除
+2018-06-10 01:25:59.210  INFO 18474 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : map 为空，不需要进行移除
+2018-06-10 01:25:59.210  INFO 18474 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : map 为空，不需要进行移除
+2018-06-10 01:25:59.211  INFO 18474 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : map 为空，不需要进行移除
+2018-06-10 01:25:59.211  INFO 18474 --- [main] c.g.d.openapi.cache.ZookeeperClient      : /soa/runtime/services/com.today.api.order.service.OrderService2 节点下面没有serviceInfo 信息，当前服务没有运行实例...
+2018-06-10 01:25:59.311  INFO 18474 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:25:59.529  INFO 18474 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69f1a286: startup date [Sun Jun 10 01:25:53 CST 2018]; root of context hierarchy
+2018-06-10 01:25:59.596  INFO 18474 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topic/{topic}]}" onto public java.lang.String com.today.kafka.monitor.controller.TopicController.getTopicMsg(java.lang.String)
+2018-06-10 01:25:59.597  INFO 18474 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stop]}" onto public java.lang.String com.today.kafka.monitor.controller.TopicController.stopCurrentTopicConsumer(java.lang.String)
+2018-06-10 01:25:59.600  INFO 18474 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-10 01:25:59.601  INFO 18474 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-10 01:25:59.628  INFO 18474 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:25:59.628  INFO 18474 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:25:59.849  INFO 18474 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-10 01:25:59.893  INFO 18474 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-10 01:25:59.900  INFO 18474 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Started KafkaMonitorApplication in 8.173 seconds (JVM running for 9.777)
+2018-06-10 01:25:59.928  INFO 18474 --- [main] ication$$EnhancerBySpringCGLIB$$b030fac8 : 
+--------------------------------------------start consumer -----------------------------------
+
+2018-06-10 01:25:59.948  INFO 18474 --- [pool-2-thread-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 10000
+	auto.offset.reset = latest
+	bootstrap.servers = [10.10.10.48:9094]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = kafka_monitor
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2018-06-10 01:26:00.008  INFO 18474 --- [pool-2-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.1.0
+2018-06-10 01:26:00.008  INFO 18474 --- [pool-2-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fdcf75ea326b8e07
+2018-06-10 01:26:00.009  INFO 18474 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : start to analyze event...
+2018-06-10 01:26:00.357  INFO 18474 --- [pool-2-thread-1] org.apache.kafka.clients.Metadata        : Cluster ID: TN7ZmTPXQ2-x0i_ny05kcw
+2018-06-10 01:26:00.366  INFO 18474 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Discovered group coordinator 10.10.10.48:9094 (id: 2147483645 rack: null)
+2018-06-10 01:26:00.369  INFO 18474 --- [pool-2-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Revoking previously assigned partitions []
+2018-06-10 01:26:00.369  INFO 18474 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] (Re-)joining group
+2018-06-10 01:26:00.541  INFO 18474 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Successfully joined group with generation 1
+2018-06-10 01:26:00.543  INFO 18474 --- [pool-2-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Setting newly assigned partitions [order_1.0.0_event-0]
+2018-06-10 01:26:00.724  INFO 18474 --- [pool-2-thread-1] o.a.k.c.consumer.internals.Fetcher       : [Consumer clientId=consumer-1, groupId=kafka_monitor] Fetch offset 0 is out of range for partition order_1.0.0_event-0, resetting offset
+2018-06-10 01:26:00.770  INFO 18474 --- [pool-2-thread-1] o.a.k.c.consumer.internals.Fetcher       : [Consumer clientId=consumer-1, groupId=kafka_monitor] Resetting offset for partition order_1.0.0_event-0 to offset 6752.
+2018-06-10 01:34:32.450  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : /soa/runtime/services/com.today.api.order.service.OrderService2子节点发生变化，重新获取信息
+2018-06-10 01:34:32.498  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:34:32.502  INFO 18474 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : com.today.api.order.service.OrderService2   [10.10.10.48:9099:1.0.0:0000000004]
+2018-06-10 01:34:32.503  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : 拿到服务 /soa/runtime/services/com.today.api.order.service.OrderService2 地址，开始解析服务元信息,处理线程数量 4
+2018-06-10 01:34:32.504  INFO 18474 --- [pool-1-thread-1] c.g.d.openapi.cache.ZookeeperClient      : 开启线程开始解析元数据信息
+2018-06-10 01:34:32.504  INFO 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : access loadServicesMetadata
+2018-06-10 01:34:34.778  INFO 18474 --- [pool-1-thread-1] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=30000 watcher=com.github.dapeng.registry.zookeeper.ClientZk$$Lambda$363/1965616619@48702e5e
+2018-06-10 01:34:34.779  INFO 18474 --- [pool-1-thread-1-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:34:34.817  INFO 18474 --- [pool-1-thread-1-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:34:34.892  INFO 18474 --- [pool-1-thread-1-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670071, negotiated timeout = 30000
+2018-06-10 01:34:34.893  INFO 18474 --- [pool-1-thread-1-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181  已连接 zookeeper Server
+2018-06-10 01:34:34.905  INFO 18474 --- [pool-1-thread-1] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo just created, now sync with zk
+2018-06-10 01:34:34.949  INFO 18474 --- [pool-1-thread-1] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::syncZkRuntimeInfo[com.today.api.order.service.OrderService2], 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:34:34.951  INFO 18474 --- [pool-1-thread-1] c.g.dapeng.registry.zookeeper.ClientZk   : <-> syncZkRuntimeInfo 触发服务实例同步，目前服务实例列表:com.today.api.order.service.OrderService2 -> IP:【10.10.10.48:9099】
+2018-06-10 01:34:34.955  INFO 18474 --- [pool-1-thread-1] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2, status:ACTIVE]
+2018-06-10 01:34:34.959  INFO 18474 --- [pool-1-thread-1] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo succeed
+2018-06-10 01:34:34.994  INFO 18474 --- [pool-1-thread-1-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:34:34.994  INFO 18474 --- [pool-1-thread-1-EventThread] c.g.dapeng.registry.zookeeper.CommonZk   : watch 监听配置子节点成功
+2018-06-10 01:34:34.994  INFO 18474 --- [pool-1-thread-1-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:34:35.009  WARN 18474 --- [pool-1-thread-1] com.github.dapeng.router.RoutesParser    : current service hava no route express config
+2018-06-10 01:34:35.009  WARN 18474 --- [pool-1-thread-1] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::getRoutes routes changes:[]
+2018-06-10 01:34:35.324  INFO 18474 --- [pool-1-thread-1] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:0, server:10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:34:36.379 ERROR 18474 --- [pool-1-thread-1] c.g.dapeng.client.netty.NettyClient      : 请求服务[com.today.api.order.service.OrderService2]超时，seqid:0
+2018-06-10 01:34:36.381 ERROR 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : com.today.api.order.service.OrderService2:1.0.0 metadata获取出错,已尝试 1 次
+2018-06-10 01:34:36.389 ERROR 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : Err-Core-003:请求服务[com.today.api.order.service.OrderService2]超时
+
+com.github.dapeng.core.SoaException: Err-Core-003:请求服务[com.today.api.order.service.OrderService2]超时
+	at com.github.dapeng.client.netty.NettyClient.send(NettyClient.java:148) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$1.onEntry(SoaBaseConnection.java:83) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:48) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.filter.LogFilter.onEntry(LogFilter.java:52) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:46) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$2.onEntry(SoaBaseConnection.java:107) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:44) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.send(SoaBaseConnection.java:128) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaConnectionPoolImpl.send(SoaConnectionPoolImpl.java:131) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.metadata.MetadataClient.getServiceMetadata(MetadataClient.java:41) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ServiceCache.loadServicesMetadata(ServiceCache.java:128) ~[dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.lambda$getServiceInfoByServiceName$3(ZookeeperClient.java:146) [dapeng-open-api-2.0.2.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_161]
+
+2018-06-10 01:34:36.390 ERROR 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : metadata获取出错
+
+com.github.dapeng.core.SoaException: Err-Core-003:请求服务[com.today.api.order.service.OrderService2]超时
+	at com.github.dapeng.client.netty.NettyClient.send(NettyClient.java:148) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$1.onEntry(SoaBaseConnection.java:83) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:48) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.filter.LogFilter.onEntry(LogFilter.java:52) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:46) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection$2.onEntry(SoaBaseConnection.java:107) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.core.filter.SharedChain.onEntry(SharedChain.java:44) ~[dapeng-core-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaBaseConnection.send(SoaBaseConnection.java:128) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.client.netty.SoaConnectionPoolImpl.send(SoaConnectionPoolImpl.java:131) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.metadata.MetadataClient.getServiceMetadata(MetadataClient.java:41) ~[dapeng-client-netty-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ServiceCache.loadServicesMetadata(ServiceCache.java:128) ~[dapeng-open-api-2.0.2.jar:na]
+	at com.github.dapeng.openapi.cache.ZookeeperClient.lambda$getServiceInfoByServiceName$3(ZookeeperClient.java:146) [dapeng-open-api-2.0.2.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_161]
+
+2018-06-10 01:34:38.395  INFO 18474 --- [pool-1-thread-1] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:1, server:10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:34:39.078 ERROR 18474 --- [nioEventLoopGroup-2-1] c.g.dapeng.client.netty.NettyClient      : 返回结果超时，siqid为：0
+2018-06-10 01:34:39.199  INFO 18474 --- [pool-1-thread-1] c.github.dapeng.client.filter.LogFilter  : LogFilter::onExit,response[seqId:1, respCode:0000, server: 10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata] cost[total:804, calleeTime1:5, calleeTime2:6
+2018-06-10 01:34:39.458  INFO 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : ----------------- service size :  1
+2018-06-10 01:34:39.459  INFO 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : zk 服务实例列表: OrderService2:1.0.0,  
+2018-06-10 01:34:39.459  INFO 18474 --- [pool-1-thread-1] c.g.dapeng.openapi.cache.ServiceCache    : com.today.api.order.service.OrderService2:1.0.0 metadata获取成功，尝试次数 2
+2018-06-10 01:37:24.988  INFO 18474 --- [Check idle connection Thread] c.g.d.c.netty.IdleConnectionManager      : channel:[id: 0xdcb5d887, L:/172.16.33.3:53067 - R:/10.10.10.48:9099] closed because of too much idle time
+2018-06-10 01:37:39.066  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : /soa/runtime/services子节点发生变化，重新获取子节点...
+2018-06-10 01:37:39.199  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : [filter service]:过滤元数据信息结果:[com.today.api.order.service.OrderService2]
+2018-06-10 01:37:39.907  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:37:39.907  INFO 18474 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : com.today.api.order.service.OrderService2   [10.10.10.48:9099:1.0.0:0000000004]
+2018-06-10 01:37:39.908  INFO 18474 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : 拿到服务 /soa/runtime/services/com.today.api.order.service.OrderService2 地址，开始解析服务元信息
+2018-06-10 01:37:39.908  INFO 18474 --- [main-EventThread] c.g.dapeng.openapi.cache.ServiceCache    : access loadServicesMetadata
+2018-06-10 01:37:41.914  INFO 18474 --- [main-EventThread] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:2, server:10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:37:42.351  INFO 18474 --- [main-EventThread] c.github.dapeng.client.filter.LogFilter  : LogFilter::onExit,response[seqId:2, respCode:0000, server: 10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata] cost[total:437, calleeTime1:2, calleeTime2:2
+2018-06-10 01:37:42.365  INFO 18474 --- [main-EventThread] c.g.dapeng.openapi.cache.ServiceCache    : ----------------- service size :  1
+2018-06-10 01:37:42.365  INFO 18474 --- [main-EventThread] c.g.dapeng.openapi.cache.ServiceCache    : zk 服务实例列表: OrderService2:1.0.0,  
+2018-06-10 01:37:42.367  INFO 18474 --- [main-EventThread] c.g.dapeng.openapi.cache.ServiceCache    : com.today.api.order.service.OrderService2:1.0.0 metadata获取成功，尝试次数 1
+2018-06-10 01:39:17.929  INFO 18474 --- [Thread-16] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@69f1a286: startup date [Sun Jun 10 01:25:53 CST 2018]; root of context hierarchy
+2018-06-10 01:39:17.931  INFO 18474 --- [Thread-16] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-10 01:39:24.089  INFO 18711 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Starting KafkaMonitorApplication on maples-mac-pro.local with PID 18711 (/Users/maple/developer/maple-learning/kafka-monitor/target/classes started by maple in /Users/maple/developer/maple-learning/kafka-monitor)
+2018-06-10 01:39:24.093  INFO 18711 --- [main] c.t.k.monitor.KafkaMonitorApplication    : No active profile set, falling back to default profiles: default
+2018-06-10 01:39:24.153  INFO 18711 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb9e6dc: startup date [Sun Jun 10 01:39:24 CST 2018]; root of context hierarchy
+2018-06-10 01:39:25.463  INFO 18711 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-06-10 01:39:25.484  INFO 18711 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-10 01:39:25.484  INFO 18711 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-10 01:39:25.489  INFO 18711 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-10 01:39:25.586  INFO 18711 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-10 01:39:25.587  INFO 18711 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1434 ms
+2018-06-10 01:39:25.748  INFO 18711 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-10 01:39:25.753  INFO 18711 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-10 01:39:25.754  INFO 18711 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-10 01:39:25.754  INFO 18711 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-10 01:39:25.754  INFO 18711 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-10 01:39:25.825  INFO 18711 --- [main] c.t.kafka.monitor.bean.MsgMeteDataBean   : zk host in the environment is not found,setting it with spring boot application, host is 10.10.10.48:2181
+2018-06-10 01:39:28.150  INFO 18711 --- [main] com.github.dapeng.openapi.utils.EnvUtil  : zkHost:10.10.10.48:2181
+2018-06-10 01:39:28.168  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2018-06-10 01:39:28.168  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=192.168.1.102
+2018-06-10 01:39:28.168  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-06-10 01:39:28.168  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-06-10 01:39:28.168  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+2018-06-10 01:39:28.168  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/tools.jar:/Users/maple/developer/maple-learning/kafka-monitor/target/classes:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.2.RELEASE/spring-boot-starter-web-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.2.RELEASE/spring-boot-starter-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.2.RELEASE/spring-boot-autoconfigure-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.2.RELEASE/spring-boot-starter-logging-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/maple/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/Users/maple/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/maple/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.2.RELEASE/spring-boot-starter-json-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.5/jackson-datatype-jdk8-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.5/jackson-datatype-jsr310-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.5/jackson-module-parameter-names-2.9.5.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.2.RELEASE/spring-boot-starter-tomcat-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/Users/maple/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.9.Final/hibernate-validator-6.0.9.Final.jar:/Users/maple/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/Users/maple/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/maple/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/Users/maple/.m2/repository/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-beans/5.0.6.RELEASE/spring-beans-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-context/5.0.6.RELEASE/spring-context-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-expression/5.0.6.RELEASE/spring-expression-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-jcl/5.0.6.RELEASE/spring-jcl-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0.jar:/Users/maple/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar:/Users/maple/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.1/snappy-java-1.1.7.1.jar:/Users/maple/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/maple/.m2/repository/com/today/event-bus_2.12/0.2-SNAPSHOT/event-bus_2.12-0.2-SNAPSHOT.jar:/Users/maple/.m2/repository/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar:/Users/maple/.m2/repository/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-aspects/5.0.6.RELEASE/spring-aspects-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/scala-sql_2.12/2.0.6/scala-sql_2.12-2.0.6.jar:/Users/maple/.m2/repository/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/spray-json_2.12/1.3.4/spray-json_2.12-1.3.4.jar:/Users/maple/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/maple/.m2/repository/com/alibaba/otter/canal.protocol/1.0.25/canal.protocol-1.0.25.jar:/Users/maple/.m2/repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-open-api/2.0.2/dapeng-open-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-client-netty/2.0.2/dapeng-client-netty-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-utils/2.0.2/dapeng-utils-2.0.2.jar:/Users/maple/.m2/repository/io/netty/netty-all/4.1.24.Final/netty-all-4.1.24.Final.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-registry-zookeeper/2.0.2/dapeng-registry-zookeeper-2.0.2.jar:/Users/maple/.m2/repository/org/apache/zookeeper/zookeeper/3.4.7/zookeeper-3.4.7.jar:/Users/maple/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-container-api/2.0.2/dapeng-container-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-router/2.0.2/dapeng-router-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-json/2.0.2/dapeng-json-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-core/2.0.2/dapeng-core-2.0.2.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/maple/.m2/repository/org/codehaus/janino/janino/3.0.8/janino-3.0.8.jar:/Users/maple/.m2/repository/org/codehaus/janino/commons-compiler/3.0.8/commons-compiler-3.0.8.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar:/Users/maple/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/maple/.m2/repository/org/simpleframework/simple-xml/2.7.1/simple-xml-2.7.1.jar:/Users/maple/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/maple/.m2/repository/stax/stax/1.2.0/stax-1.2.0.jar:/Users/maple/.m2/repository/xpp3/xpp3/1.1.3.3/xpp3-1.1.3.3.jar:/Users/maple/.m2/repository/org/springframework/retry/spring-retry/1.2.2.RELEASE/spring-retry-1.2.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Users/maple/Library/Caches/IntelliJIdea2018.1/captureAgent/debugger-agent.jar
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/b3/3qln3fjx61v26zql8r7sdhg00000gn/T/
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.13.3
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=maple
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/maple
+2018-06-10 01:39:28.169  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/maple/developer/maple-learning/kafka-monitor
+2018-06-10 01:39:28.172  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$295/1121401953@23382f76
+2018-06-10 01:39:28.201  INFO 18711 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:39:28.273  INFO 18711 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:39:28.326  INFO 18711 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670074, negotiated timeout = 15000
+2018-06-10 01:39:28.333  INFO 18711 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:39:28.333  INFO 18711 --- [main] c.g.d.openapi.cache.ZookeeperClient      : wait for lock
+2018-06-10 01:39:28.834  INFO 18711 --- [main] c.g.d.openapi.cache.ZookeeperClient      : [filter service]:过滤元数据信息结果:[com.today.api.order.service.OrderService2]
+2018-06-10 01:39:28.876  INFO 18711 --- [main] c.g.d.openapi.cache.ZookeeperClient      : 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:39:28.878  INFO 18711 --- [main] c.g.d.registry.zookeeper.WatcherUtils    : com.today.api.order.service.OrderService2   [10.10.10.48:9099:1.0.0:0000000004]
+2018-06-10 01:39:28.879  INFO 18711 --- [main] c.g.d.openapi.cache.ZookeeperClient      : 拿到服务 /soa/runtime/services/com.today.api.order.service.OrderService2 地址，开始解析服务元信息
+2018-06-10 01:39:28.880  INFO 18711 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : access loadServicesMetadata
+2018-06-10 01:39:30.898  INFO 18711 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=30000 watcher=com.github.dapeng.registry.zookeeper.ClientZk$$Lambda$304/1551103602@8ee0c23
+2018-06-10 01:39:30.899  INFO 18711 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:39:30.941  INFO 18711 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:39:30.983  INFO 18711 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670075, negotiated timeout = 30000
+2018-06-10 01:39:30.984  INFO 18711 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181  已连接 zookeeper Server
+2018-06-10 01:39:30.987  INFO 18711 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo just created, now sync with zk
+2018-06-10 01:39:31.027  INFO 18711 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::syncZkRuntimeInfo[com.today.api.order.service.OrderService2], 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:39:31.028  INFO 18711 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : <-> syncZkRuntimeInfo 触发服务实例同步，目前服务实例列表:com.today.api.order.service.OrderService2 -> IP:【10.10.10.48:9099】
+2018-06-10 01:39:31.033  INFO 18711 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2, status:ACTIVE]
+2018-06-10 01:39:31.035  INFO 18711 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo succeed
+2018-06-10 01:39:31.072  INFO 18711 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:39:31.072  INFO 18711 --- [main-EventThread] c.g.dapeng.registry.zookeeper.CommonZk   : watch 监听配置子节点成功
+2018-06-10 01:39:31.072  INFO 18711 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:39:31.112  WARN 18711 --- [main] com.github.dapeng.router.RoutesParser    : current service hava no route express config
+2018-06-10 01:39:31.112  WARN 18711 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::getRoutes routes changes:[]
+2018-06-10 01:39:31.295  INFO 18711 --- [main] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:0, server:10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:39:31.731  INFO 18711 --- [main] c.github.dapeng.client.filter.LogFilter  : LogFilter::onExit,response[seqId:0, respCode:0000, server: 10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata] cost[total:437, calleeTime1:2, calleeTime2:3
+2018-06-10 01:39:31.906  INFO 18711 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : ----------------- service size :  1
+2018-06-10 01:39:31.907  INFO 18711 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : zk 服务实例列表: OrderService2:1.0.0,  
+2018-06-10 01:39:31.907  INFO 18711 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : com.today.api.order.service.OrderService2:1.0.0 metadata获取成功，尝试次数 1
+2018-06-10 01:39:31.985  INFO 18711 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:39:32.162  INFO 18711 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb9e6dc: startup date [Sun Jun 10 01:39:24 CST 2018]; root of context hierarchy
+2018-06-10 01:39:32.208  INFO 18711 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topic/{topic}]}" onto public java.lang.String com.today.kafka.monitor.controller.TopicController.getTopicMsg(java.lang.String)
+2018-06-10 01:39:32.209  INFO 18711 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stop]}" onto public java.lang.String com.today.kafka.monitor.controller.TopicController.stopCurrentTopicConsumer(java.lang.String)
+2018-06-10 01:39:32.212  INFO 18711 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-10 01:39:32.212  INFO 18711 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-10 01:39:32.243  INFO 18711 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:39:32.243  INFO 18711 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:39:32.381  INFO 18711 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-10 01:39:32.410  INFO 18711 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-10 01:39:32.415  INFO 18711 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Started KafkaMonitorApplication in 8.999 seconds (JVM running for 10.692)
+2018-06-10 01:39:32.423  INFO 18711 --- [main] ication$$EnhancerBySpringCGLIB$$bc52a633 : 
+--------------------------------------------start consumer -----------------------------------
+
+2018-06-10 01:39:32.437  INFO 18711 --- [pool-2-thread-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 10000
+	auto.offset.reset = latest
+	bootstrap.servers = [10.10.10.48:9094]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = kafka_monitor
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2018-06-10 01:39:32.483  INFO 18711 --- [pool-2-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.1.0
+2018-06-10 01:39:32.483  INFO 18711 --- [pool-2-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fdcf75ea326b8e07
+2018-06-10 01:39:32.486  INFO 18711 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : start to analyze event...
+2018-06-10 01:39:32.742  INFO 18711 --- [pool-2-thread-1] org.apache.kafka.clients.Metadata        : Cluster ID: TN7ZmTPXQ2-x0i_ny05kcw
+2018-06-10 01:39:32.746  INFO 18711 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Discovered group coordinator 10.10.10.48:9094 (id: 2147483645 rack: null)
+2018-06-10 01:39:32.765  INFO 18711 --- [pool-2-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Revoking previously assigned partitions []
+2018-06-10 01:39:32.768  INFO 18711 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] (Re-)joining group
+2018-06-10 01:39:32.944  INFO 18711 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Successfully joined group with generation 3
+2018-06-10 01:39:32.946  INFO 18711 --- [pool-2-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Setting newly assigned partitions [order_1.0.0_event-0]
+2018-06-10 01:39:33.163  INFO 18711 --- [pool-2-thread-1] o.a.k.c.consumer.internals.Fetcher       : [Consumer clientId=consumer-1, groupId=kafka_monitor] Fetch offset 0 is out of range for partition order_1.0.0_event-0, resetting offset
+2018-06-10 01:39:33.279  INFO 18711 --- [pool-2-thread-1] o.a.k.c.consumer.internals.Fetcher       : [Consumer clientId=consumer-1, groupId=kafka_monitor] Resetting offset for partition order_1.0.0_event-0 to offset 6752.
+2018-06-10 01:42:21.060  INFO 18711 --- [Check idle connection Thread] c.g.d.c.netty.IdleConnectionManager      : channel:[id: 0x434c95d3, L:/172.16.33.3:54130 - R:/10.10.10.48:9099] closed because of too much idle time
+2018-06-10 01:44:15.567  INFO 18711 --- [Thread-19] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@bb9e6dc: startup date [Sun Jun 10 01:39:24 CST 2018]; root of context hierarchy
+2018-06-10 01:44:15.577  INFO 18711 --- [Thread-19] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-06-10 01:44:20.280  INFO 18796 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Starting KafkaMonitorApplication on maples-mac-pro.local with PID 18796 (/Users/maple/developer/maple-learning/kafka-monitor/target/classes started by maple in /Users/maple/developer/maple-learning/kafka-monitor)
+2018-06-10 01:44:20.286  INFO 18796 --- [main] c.t.k.monitor.KafkaMonitorApplication    : No active profile set, falling back to default profiles: default
+2018-06-10 01:44:20.341  INFO 18796 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6692b6c6: startup date [Sun Jun 10 01:44:20 CST 2018]; root of context hierarchy
+2018-06-10 01:44:21.395  INFO 18796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-06-10 01:44:21.414  INFO 18796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-10 01:44:21.415  INFO 18796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-10 01:44:21.419  INFO 18796 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-06-10 01:44:21.482  INFO 18796 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-10 01:44:21.482  INFO 18796 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1141 ms
+2018-06-10 01:44:21.592  INFO 18796 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-06-10 01:44:21.598  INFO 18796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-10 01:44:21.599  INFO 18796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-10 01:44:21.599  INFO 18796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-10 01:44:21.599  INFO 18796 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-10 01:44:21.659  INFO 18796 --- [main] c.t.kafka.monitor.bean.MsgMeteDataBean   : zk host in the environment is not found,setting it with spring boot application, host is 10.10.10.48:2181
+2018-06-10 01:44:25.924  INFO 18796 --- [main] com.github.dapeng.openapi.utils.EnvUtil  : zkHost:10.10.10.48:2181
+2018-06-10 01:44:25.958  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2018-06-10 01:44:25.958  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=192.168.1.102
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_161
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/lib/tools.jar:/Users/maple/developer/maple-learning/kafka-monitor/target/classes:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.2.RELEASE/spring-boot-starter-web-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.2.RELEASE/spring-boot-starter-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot/2.0.2.RELEASE/spring-boot-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.2.RELEASE/spring-boot-autoconfigure-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.2.RELEASE/spring-boot-starter-logging-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/Users/maple/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/Users/maple/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/Users/maple/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/maple/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.2.RELEASE/spring-boot-starter-json-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.5/jackson-datatype-jdk8-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.5/jackson-datatype-jsr310-2.9.5.jar:/Users/maple/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.5/jackson-module-parameter-names-2.9.5.jar:/Users/maple/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.2.RELEASE/spring-boot-starter-tomcat-2.0.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/Users/maple/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/Users/maple/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.9.Final/hibernate-validator-6.0.9.Final.jar:/Users/maple/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/Users/maple/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/Users/maple/.m2/repository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar:/Users/maple/.m2/repository/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-beans/5.0.6.RELEASE/spring-beans-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-context/5.0.6.RELEASE/spring-context-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-expression/5.0.6.RELEASE/spring-expression-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-jcl/5.0.6.RELEASE/spring-jcl-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0.jar:/Users/maple/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar:/Users/maple/.m2/repository/org/xerial/snappy/snappy-java/1.1.7.1/snappy-java-1.1.7.1.jar:/Users/maple/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/maple/.m2/repository/com/today/event-bus_2.12/0.2-SNAPSHOT/event-bus_2.12-0.2-SNAPSHOT.jar:/Users/maple/.m2/repository/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.jar:/Users/maple/.m2/repository/org/springframework/spring-aop/5.0.6.RELEASE/spring-aop-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/springframework/spring-aspects/5.0.6.RELEASE/spring-aspects-5.0.6.RELEASE.jar:/Users/maple/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/scala-sql_2.12/2.0.6/scala-sql_2.12-2.0.6.jar:/Users/maple/.m2/repository/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.jar:/Users/maple/.m2/repository/com/github/wangzaixiang/spray-json_2.12/1.3.4/spray-json_2.12-1.3.4.jar:/Users/maple/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/maple/.m2/repository/com/alibaba/otter/canal.protocol/1.0.25/canal.protocol-1.0.25.jar:/Users/maple/.m2/repository/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-open-api/2.0.2/dapeng-open-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-client-netty/2.0.2/dapeng-client-netty-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-utils/2.0.2/dapeng-utils-2.0.2.jar:/Users/maple/.m2/repository/io/netty/netty-all/4.1.24.Final/netty-all-4.1.24.Final.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-registry-zookeeper/2.0.2/dapeng-registry-zookeeper-2.0.2.jar:/Users/maple/.m2/repository/org/apache/zookeeper/zookeeper/3.4.7/zookeeper-3.4.7.jar:/Users/maple/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-container-api/2.0.2/dapeng-container-api-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-router/2.0.2/dapeng-router-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-json/2.0.2/dapeng-json-2.0.2.jar:/Users/maple/.m2/repository/com/github/dapeng/dapeng-core/2.0.2/dapeng-core-2.0.2.jar:/Users/maple/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/maple/.m2/repository/org/codehaus/janino/janino/3.0.8/janino-3.0.8.jar:/Users/maple/.m2/repository/org/codehaus/janino/commons-compiler/3.0.8/commons-compiler-3.0.8.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/maple/.m2/repository/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar:/Users/maple/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/maple/.m2/repository/org/simpleframework/simple-xml/2.7.1/simple-xml-2.7.1.jar:/Users/maple/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/maple/.m2/repository/stax/stax/1.2.0/stax-1.2.0.jar:/Users/maple/.m2/repository/xpp3/xpp3/1.1.3.3/xpp3-1.1.3.3.jar:/Users/maple/.m2/repository/org/springframework/retry/spring-retry/1.2.2.RELEASE/spring-retry-1.2.2.RELEASE.jar:/Users/maple/.m2/repository/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar:/Users/maple/Library/Caches/IntelliJIdea2018.1/captureAgent/debugger-agent.jar
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/maple/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/b3/3qln3fjx61v26zql8r7sdhg00000gn/T/
+2018-06-10 01:44:25.959  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-06-10 01:44:25.960  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2018-06-10 01:44:25.960  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2018-06-10 01:44:25.960  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.13.3
+2018-06-10 01:44:25.960  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=maple
+2018-06-10 01:44:25.960  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/maple
+2018-06-10 01:44:25.960  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/maple/developer/maple-learning/kafka-monitor
+2018-06-10 01:44:25.964  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$295/939625314@3f4cd155
+2018-06-10 01:44:25.996  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:44:26.720  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:44:27.840  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670078, negotiated timeout = 15000
+2018-06-10 01:44:27.844  INFO 18796 --- [main] c.g.d.openapi.cache.ZookeeperClient      : wait for lock
+2018-06-10 01:44:27.844  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:44:28.122  INFO 18796 --- [main] c.g.d.openapi.cache.ZookeeperClient      : [filter service]:过滤元数据信息结果:[com.today.api.order.service.OrderService2]
+2018-06-10 01:44:28.163  INFO 18796 --- [main] c.g.d.openapi.cache.ZookeeperClient      : 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:44:28.165  INFO 18796 --- [main] c.g.d.registry.zookeeper.WatcherUtils    : com.today.api.order.service.OrderService2   [10.10.10.48:9099:1.0.0:0000000004]
+2018-06-10 01:44:28.165  INFO 18796 --- [main] c.g.d.openapi.cache.ZookeeperClient      : 拿到服务 /soa/runtime/services/com.today.api.order.service.OrderService2 地址，开始解析服务元信息
+2018-06-10 01:44:28.166  INFO 18796 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : access loadServicesMetadata
+2018-06-10 01:44:30.178  INFO 18796 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=30000 watcher=com.github.dapeng.registry.zookeeper.ClientZk$$Lambda$304/273041802@243f003c
+2018-06-10 01:44:30.180  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:44:30.231  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:44:30.273  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670079, negotiated timeout = 30000
+2018-06-10 01:44:30.275  INFO 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181  已连接 zookeeper Server
+2018-06-10 01:44:30.281  INFO 18796 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo just created, now sync with zk
+2018-06-10 01:44:30.325  INFO 18796 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::syncZkRuntimeInfo[com.today.api.order.service.OrderService2], 获取/soa/runtime/services/com.today.api.order.service.OrderService2的子节点成功
+2018-06-10 01:44:30.327  INFO 18796 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : <-> syncZkRuntimeInfo 触发服务实例同步，目前服务实例列表:com.today.api.order.service.OrderService2 -> IP:【10.10.10.48:9099】
+2018-06-10 01:44:30.332  INFO 18796 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2, status:ACTIVE]
+2018-06-10 01:44:30.338  INFO 18796 --- [main] c.g.d.r.zookeeper.ZkClientAgentImpl      : ZkClientAgentImpl::syncService[serviceName:com.today.api.order.service.OrderService2]:zkInfo succeed
+2018-06-10 01:44:30.382  INFO 18796 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:44:30.382  INFO 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.CommonZk   : watch 监听配置子节点成功
+2018-06-10 01:44:30.382  INFO 18796 --- [main-EventThread] c.g.d.registry.zookeeper.WatcherUtils    : get config from com.today.api.order.service.OrderService2 with data []
+2018-06-10 01:44:30.393  WARN 18796 --- [main] com.github.dapeng.router.RoutesParser    : current service hava no route express config
+2018-06-10 01:44:30.393  WARN 18796 --- [main] c.g.dapeng.registry.zookeeper.ClientZk   : ClientZk::getRoutes routes changes:[]
+2018-06-10 01:44:30.620  INFO 18796 --- [main] c.github.dapeng.client.filter.LogFilter  : LogFilter::onEntry,request[seqId:0, server:10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata]
+2018-06-10 01:44:30.874  INFO 18796 --- [main] c.github.dapeng.client.filter.LogFilter  : LogFilter::onExit,response[seqId:0, respCode:0000, server: 10.10.10.48:9099]:service[com.today.api.order.service.OrderService2]:version[1.0.0]:method[getServiceMetadata] cost[total:256, calleeTime1:2, calleeTime2:3
+2018-06-10 01:44:31.119  INFO 18796 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : ----------------- service size :  1
+2018-06-10 01:44:31.120  INFO 18796 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : zk 服务实例列表: OrderService2:1.0.0,  
+2018-06-10 01:44:31.120  INFO 18796 --- [main] c.g.dapeng.openapi.cache.ServiceCache    : com.today.api.order.service.OrderService2:1.0.0 metadata获取成功，尝试次数 1
+2018-06-10 01:44:31.214  INFO 18796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:44:31.515  INFO 18796 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6692b6c6: startup date [Sun Jun 10 01:44:20 CST 2018]; root of context hierarchy
+2018-06-10 01:44:31.608  INFO 18796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topic/{topic}]}" onto public java.lang.String com.today.kafka.monitor.controller.TopicController.getTopicMsg(java.lang.String)
+2018-06-10 01:44:31.609  INFO 18796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stop]}" onto public java.lang.String com.today.kafka.monitor.controller.TopicController.stopCurrentTopicConsumer(java.lang.String)
+2018-06-10 01:44:31.613  INFO 18796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-10 01:44:31.616  INFO 18796 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-10 01:44:31.662  INFO 18796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:44:31.662  INFO 18796 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-10 01:44:31.838  INFO 18796 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-06-10 01:44:31.867  INFO 18796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-10 01:44:31.872  INFO 18796 --- [main] c.t.k.monitor.KafkaMonitorApplication    : Started KafkaMonitorApplication in 12.115 seconds (JVM running for 13.163)
+2018-06-10 01:44:31.878  INFO 18796 --- [main] lication$$EnhancerBySpringCGLIB$$2f387c9 : 
+--------------------------------------------start consumer -----------------------------------
+
+2018-06-10 01:44:31.892  INFO 18796 --- [pool-2-thread-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	auto.commit.interval.ms = 10000
+	auto.offset.reset = latest
+	bootstrap.servers = [10.10.10.48:9094]
+	check.crcs = true
+	client.id = 
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = kafka_monitor
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2018-06-10 01:44:31.932  INFO 18796 --- [pool-2-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.1.0
+2018-06-10 01:44:31.932  INFO 18796 --- [pool-2-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fdcf75ea326b8e07
+2018-06-10 01:44:31.936  INFO 18796 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : start to analyze event...
+2018-06-10 01:44:32.234  INFO 18796 --- [pool-2-thread-1] org.apache.kafka.clients.Metadata        : Cluster ID: TN7ZmTPXQ2-x0i_ny05kcw
+2018-06-10 01:44:32.235  INFO 18796 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Discovered group coordinator 10.10.10.48:9094 (id: 2147483645 rack: null)
+2018-06-10 01:44:32.237  INFO 18796 --- [pool-2-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Revoking previously assigned partitions []
+2018-06-10 01:44:32.237  INFO 18796 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] (Re-)joining group
+2018-06-10 01:44:32.427  INFO 18796 --- [pool-2-thread-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Successfully joined group with generation 5
+2018-06-10 01:44:32.428  INFO 18796 --- [pool-2-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=kafka_monitor] Setting newly assigned partitions [order_1.0.0_event-0]
+2018-06-10 01:44:40.475  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 12312ms for sessionid 0x1001841cb670078
+2018-06-10 01:44:40.477  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 12312ms for sessionid 0x1001841cb670078, closing socket connection and attempting reconnect
+2018-06-10 01:44:40.491  INFO 18796 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : null
+
+java.lang.NullPointerException: null
+	at com.github.dapeng.json.JsonSerializer.read(JsonSerializer.java:49) ~[dapeng-json-2.0.2.jar:na]
+	at com.github.dapeng.json.JsonSerializer.readField(JsonSerializer.java:128) ~[dapeng-json-2.0.2.jar:na]
+	at com.github.dapeng.json.JsonSerializer.read(JsonSerializer.java:59) ~[dapeng-json-2.0.2.jar:na]
+	at com.github.dapeng.json.JsonSerializer.read(JsonSerializer.java:226) ~[dapeng-json-2.0.2.jar:na]
+	at com.today.kafka.monitor.msg.MsgDecoder.dealMessage(MsgDecoder.java:78) ~[classes/:na]
+	at com.today.kafka.monitor.msg.KafkaMonitorConsumer.start(KafkaMonitorConsumer.java:73) ~[classes/:na]
+	at com.today.kafka.monitor.KafkaMonitorApplication.lambda$run$0(KafkaMonitorApplication.java:39) [classes/:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_161]
+
+2018-06-10 01:44:40.493  INFO 18796 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : receive: partition:0, offset:6501, topic:order_1.0.0_event, value:com.today.api.order.scala.events.CancelOrderEventNew ��ʽ9060815242438814.00004.0000H0.0000�4.0000911712000 6�����X(  �����X����X�����Xغ80.0000 ��90608152424388120526221超番薯4元  80.00004.0000 (0.0000   
+
+
+2018-06-10 01:44:56.041  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 25650ms for sessionid 0x1001841cb670079
+2018-06-10 01:44:56.041  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 连接不上了
+2018-06-10 01:44:56.043  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 25650ms for sessionid 0x1001841cb670079, closing socket connection and attempting reconnect
+2018-06-10 01:44:59.158 ERROR 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181 到zookeeper的连接被断开
+2018-06-10 01:44:59.158  INFO 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181 关闭到zookeeper的连接
+2018-06-10 01:45:10.595  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:45:10.598  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Session: 0x1001841cb670079 closed
+2018-06-10 01:45:10.598  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=30000 watcher=com.github.dapeng.registry.zookeeper.ClientZk$$Lambda$304/273041802@32e8cec
+2018-06-10 01:45:10.654  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:45:10.660  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:45:13.418  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:45:14.848  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x1001841cb670078 has expired
+2018-06-10 01:45:14.848  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : zookeeper Watcher 到zookeeper Server的session过期，重连
+2018-06-10 01:45:14.849  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$295/939625314@233f3665
+2018-06-10 01:45:14.849  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x1001841cb670078 has expired, closing socket connection
+2018-06-10 01:45:15.463  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:45:16.820  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:45:21.121  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x1001841cb670079
+2018-06-10 01:45:23.051  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb67007b, negotiated timeout = 15000
+2018-06-10 01:45:23.154  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb67007a, negotiated timeout = 30000
+2018-06-10 01:45:23.154  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:45:23.164  INFO 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181  已连接 zookeeper Server
+2018-06-10 01:45:23.164  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x1001841cb670078
+2018-06-10 01:45:50.707  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 22185ms for sessionid 0x1001841cb67007b
+2018-06-10 01:45:50.707  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 22185ms for sessionid 0x1001841cb67007b, closing socket connection and attempting reconnect
+2018-06-10 01:45:50.707  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 26900ms for sessionid 0x1001841cb67007a
+2018-06-10 01:45:50.707  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 26900ms for sessionid 0x1001841cb67007a, closing socket connection and attempting reconnect
+2018-06-10 01:45:50.889  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 连接不上了
+2018-06-10 01:45:50.889 ERROR 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181 到zookeeper的连接被断开
+2018-06-10 01:45:50.889  INFO 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181 关闭到zookeeper的连接
+2018-06-10 01:45:53.503  INFO 18796 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : null
+
+java.lang.NullPointerException: null
+	at com.github.dapeng.json.JsonSerializer.read(JsonSerializer.java:49) ~[dapeng-json-2.0.2.jar:na]
+	at com.github.dapeng.json.JsonSerializer.readField(JsonSerializer.java:128) ~[dapeng-json-2.0.2.jar:na]
+	at com.github.dapeng.json.JsonSerializer.read(JsonSerializer.java:59) ~[dapeng-json-2.0.2.jar:na]
+	at com.github.dapeng.json.JsonSerializer.read(JsonSerializer.java:226) ~[dapeng-json-2.0.2.jar:na]
+	at com.today.kafka.monitor.msg.MsgDecoder.dealMessage(MsgDecoder.java:78) ~[classes/:na]
+	at com.today.kafka.monitor.msg.KafkaMonitorConsumer.start(KafkaMonitorConsumer.java:73) ~[classes/:na]
+	at com.today.kafka.monitor.KafkaMonitorApplication.lambda$run$0(KafkaMonitorApplication.java:39) [classes/:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_161]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_161]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_161]
+
+2018-06-10 01:45:53.503  INFO 18796 --- [pool-2-thread-1] c.t.k.monitor.msg.KafkaMonitorConsumer   : receive: partition:0, offset:6503, topic:order_1.0.0_event, value:com.today.api.order.scala.events.CreateOrderEventNew ��̽9060815262331534.00004.0000H0.0000�0.0000911712000 X  %�����X�����X��� ��90608152623315320526221超番薯4元  80.00004.0000  (0.0000   
+
+
+2018-06-10 01:46:24.448  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:46:24.448  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Session: 0x1001841cb67007a closed
+2018-06-10 01:46:24.465  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=30000 watcher=com.github.dapeng.registry.zookeeper.ClientZk$$Lambda$304/273041802@44618158
+2018-06-10 01:46:24.482  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:46:28.817  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:46:28.818  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:46:31.276  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x1001841cb67007b has expired
+2018-06-10 01:46:31.373  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x1001841cb67007b has expired, closing socket connection
+2018-06-10 01:46:31.373  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : zookeeper Watcher 到zookeeper Server的session过期，重连
+2018-06-10 01:46:31.374  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$295/939625314@5efc01f6
+2018-06-10 01:46:31.421  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:46:35.692  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x1001841cb67007a
+2018-06-10 01:46:35.692  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb67007c, negotiated timeout = 30000
+2018-06-10 01:46:35.694  INFO 18796 --- [main-EventThread] c.g.dapeng.registry.zookeeper.ClientZk   : Client's host: 10.10.10.48:2181  已连接 zookeeper Server
+2018-06-10 01:46:40.289  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:46:42.687  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb67007d, negotiated timeout = 15000
+2018-06-10 01:46:51.824  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x1001841cb67007b
+2018-06-10 01:46:51.824  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:46:58.500  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 15813ms for sessionid 0x1001841cb67007d
+2018-06-10 01:46:58.502  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Client session timed out, have not heard from server in 15813ms for sessionid 0x1001841cb67007d, closing socket connection and attempting reconnect
+2018-06-10 01:47:02.375  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 连接不上了
+2018-06-10 01:47:11.911  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:47:12.685  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:47:20.156  WARN 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x1001841cb67007d has expired
+2018-06-10 01:47:20.157  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : zookeeper Watcher 到zookeeper Server的session过期，重连
+2018-06-10 01:47:20.157  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Unable to reconnect to ZooKeeper service, session 0x1001841cb67007d has expired, closing socket connection
+2018-06-10 01:47:20.157  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=10.10.10.48:2181 sessionTimeout=15000 watcher=com.github.dapeng.openapi.cache.ZookeeperClient$$Lambda$295/939625314@566b275f
+2018-06-10 01:47:21.994  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 10.10.10.48/10.10.10.48:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-06-10 01:47:28.092  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 10.10.10.48/10.10.10.48:2181, initiating session
+2018-06-10 01:47:28.921  INFO 18796 --- [main-SendThread(10.10.10.48:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 10.10.10.48/10.10.10.48:2181, sessionid = 0x1001841cb670081, negotiated timeout = 15000
+2018-06-10 01:47:28.922  INFO 18796 --- [main-EventThread] c.g.d.openapi.cache.ZookeeperClient      : Zookeeper Watcher 已连接 zookeeper Server,Zookeeper host: 10.10.10.48:2181
+2018-06-10 01:47:28.983  INFO 18796 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down for session: 0x1001841cb67007d
