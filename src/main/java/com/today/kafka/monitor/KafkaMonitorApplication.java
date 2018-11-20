@@ -1,11 +1,9 @@
 package com.today.kafka.monitor;
 
-import com.today.kafka.monitor.msg.KafkaMonitorConsumer;
+import com.today.kafka.monitor.msg.KafkaDumpConsumer;
 import com.today.kafka.monitor.msg.KafkaMsgProperties;
 import com.today.kafka.monitor.xml.EventDataHolder;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,9 +20,9 @@ import java.util.concurrent.Executors;
 @EnableConfigurationProperties(KafkaMsgProperties.class)
 @Slf4j
 public class KafkaMonitorApplication implements ApplicationRunner {
-    private final KafkaMonitorConsumer monitor;
+    private final KafkaDumpConsumer monitor;
 
-    public KafkaMonitorApplication(KafkaMonitorConsumer monitor) {
+    public KafkaMonitorApplication(KafkaDumpConsumer monitor) {
         this.monitor = monitor;
     }
 
