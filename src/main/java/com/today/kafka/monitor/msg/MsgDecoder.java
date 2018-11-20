@@ -2,6 +2,7 @@ package com.today.kafka.monitor.msg;
 
 import com.github.dapeng.core.metadata.Service;
 import com.github.dapeng.json.JsonSerializer;
+import com.github.dapeng.json.OptimizedMetadata;
 import com.github.dapeng.openapi.cache.ServiceCache;
 import com.github.dapeng.org.apache.thrift.TException;
 import com.github.dapeng.org.apache.thrift.protocol.TCompactProtocol;
@@ -11,8 +12,12 @@ import com.github.dapeng.util.TKafkaTransport;
 import com.today.eventbus.serializer.KafkaMessageProcessor;
 import com.today.kafka.monitor.xml.Consumers;
 import com.today.kafka.monitor.xml.EventDataHolder;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.http.NameValuePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 /**
  * Desc: MsgDecoder
@@ -20,15 +25,12 @@ import org.slf4j.LoggerFactory;
  * @author hz.lei
  * @date 2018年05月16日 下午10:12
  */
+@Slf4j
 public class MsgDecoder {
     private static Logger logger = LoggerFactory.getLogger(MsgDecoder.class);
 
     /**
      * 将事件解码为 json 形式
-     *
-     * @param value
-     * @return
-     * @throws TException
      */
     protected static String dealMessage(byte[] value) throws TException {
         KafkaMessageProcessor processor = new KafkaMessageProcessor();
@@ -48,11 +50,11 @@ public class MsgDecoder {
             return null;
         }
         //通过事件元信息，通过请求thrift元数据得到事件序列化结构体
-        Service service = ServiceCache.getService(bizConsumer.getService(), bizConsumer.getVersion());
-
-        /*if (service == null) {
+        OptimizedMetadata.OptimizedService service = ServiceCache.getService(bizConsumer.getService(), bizConsumer.getVersion());
+        if (service == null) {
+            logger.warn("元数据信息service为空，未能获取到元数据!!!");
             int i = 0;
-            while (service == null && i < 3) {
+            do {
                 service = ServiceCache.getService(bizConsumer.getService(), bizConsumer.getVersion());
                 if (service != null) {
                     break;
@@ -60,25 +62,18 @@ public class MsgDecoder {
                 i++;
                 try {
                     Thread.sleep(i * 1000);
-                } catch (InterruptedException e) {
+                } catch (InterruptedException ignored) {
                 }
-            }
-        }*/
-
-        if (service == null) {
-            throw new RuntimeException("获取不到service cache 元信息");
+            } while (i < 5);
         }
-
+        if (service == null) {
+            return null;
+        }
         byte[] eventBinary = processor.getEventBinary();
-        /**
-         * 针对 dapeng 2.0.2
-         */
-        JsonSerializer jsonDecoder = new JsonSerializer(service, null, bizConsumer.getVersion(), MetaDataUtil.findStruct(bizConsumer.getEvent(), service));
+        JsonSerializer jsonDecoder = new JsonSerializer(service, null, bizConsumer.getVersion(), service.getOptimizedStructs().getOrDefault(bizConsumer.getEvent(), null));
 
         String body = jsonDecoder.read(new TCompactProtocol(new TKafkaTransport(eventBinary, TCommonTransport.Type.Read)));
-
-
+        log.info("event body: {}", body);
         return body;
-
     }
 }

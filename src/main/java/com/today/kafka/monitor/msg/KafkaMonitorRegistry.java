@@ -21,7 +21,7 @@ public class KafkaMonitorRegistry {
     private Map<String, MsgConsumer> consumerMap = new ConcurrentHashMap<>();
 
     public void registerConsumer(String topic) {
-        KafkaMonitorConsumer consumer = new KafkaMonitorConsumer();
+        KafkaMonitorConsumer consumer = new KafkaMonitorConsumer(msgEnv);
 
     }
 

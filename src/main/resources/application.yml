@@ -1,0 +1,4 @@
+logging:
+  file: ./detail-kafka-monitor.%d{yyyy-MM-dd}.log
+  level:
+    root: debug
