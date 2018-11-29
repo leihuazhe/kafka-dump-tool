@@ -11,6 +11,10 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 public class DumpConfig {
     /**
+     * key
+     */
+    private String key;
+    /**
      * zookeeper host
      */
     private String zookeeperHost;

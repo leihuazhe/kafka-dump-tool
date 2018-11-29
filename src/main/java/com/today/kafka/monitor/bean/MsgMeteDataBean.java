@@ -45,7 +45,7 @@ public class MsgMeteDataBean implements InitializingBean {
         } else {
             serviceSet = EventDataHolder.getServiceSet();
         }
-
-        bootstrap.filterInit(serviceSet);
+        bootstrap.init();
+//        bootstrap.filterInit(serviceSet);
     }
 }

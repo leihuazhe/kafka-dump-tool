@@ -1,6 +1,8 @@
 package com.today.kafka.monitor.msg;
 
 import com.today.kafka.monitor.service.DumpConfig;
+import com.today.kafka.monitor.socketio.EventType;
+import com.today.kafka.monitor.socketio.SocketIoServer;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
@@ -21,30 +23,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @update 2018.11.20 17:43
  */
 @Slf4j
-public class KafkaDumpConsumer {
-    private AtomicInteger counter = new AtomicInteger(0);
-    private final DumpConfig config;
+public class KafkaDumpConsumer extends AbstractConsumer {
 
-    public KafkaDumpConsumer(DumpConfig config) {
-        this.config = config;
-    }
-
-    /**
-     * 配置
-     *
-     * @return properties
-     */
-    private Properties configConsumer() {
-        Properties props = new Properties();
-        props.put("bootstrap.servers", config.getKafkaHost());
-        props.put("group.id", config.getGroupId());
-        //no commit to broker, unnecessary
-        props.put("enable.auto.commit", "false");
-        props.put("auto.commit.interval.ms", "10000");
-        props.put("key.deserializer", "org.apache.kafka.common.serialization.LongDeserializer");
-        props.put("value.deserializer", "org.apache.kafka.common.serialization.ByteArrayDeserializer");
-        props.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");
-        return props;
+    public KafkaDumpConsumer(DumpConfig config, SocketIoServer ioServer) {
+        super(config, ioServer);
     }
 
     public void start() {
@@ -59,7 +41,10 @@ public class KafkaDumpConsumer {
 
             @Override
             public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
-                partitions.forEach(p -> consumer.seek(p, config.getBegin()));
+                partitions.forEach(p -> {
+                    consumer.seek(p, config.getBegin());
+                    log.info("Assigned partition {} to offset {}", p.partition(), config.getBegin());
+                });
             }
         });
         log.info("start to analyze event,groupId:{},topic:{},begin offset:{},limit:{}",
@@ -79,6 +64,7 @@ public class KafkaDumpConsumer {
                     if (json == null) {
                         json = new String(record.value(), StandardCharsets.UTF_8);
                     }
+                    ioServer.getServer().getBroadcastOperations().sendEvent(EventType.MESSAGE.getName(), json);
                     log.info("receive: partition:{}, offset:{}, topic:{}, value:{}\n\n",
                             record.partition(), record.offset(), record.topic(), json);
                 } else {

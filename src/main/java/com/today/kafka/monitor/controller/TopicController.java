@@ -1,7 +1,6 @@
 package com.today.kafka.monitor.controller;
 
-import com.today.kafka.monitor.msg.KafkaMonitorRegistry;
-import org.springframework.web.bind.annotation.PathVariable;
+import com.today.kafka.monitor.service.KafkaMonitorRegistry;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,12 +19,12 @@ public class TopicController {
     }
 
 
-    @RequestMapping("/topic/{topic}")
+    /*@RequestMapping("/topic/{topic}")
     public String getTopicMsg(@PathVariable(name = "topic") String topic) {
-        monitorRegistry.registerConsumer(topic);
+//        monitorRegistry.registerConsumer(topic);
         monitorRegistry.startConsumer(topic);
         return "";
-    }
+    }*/
 
     @RequestMapping("/stop")
     public String stopCurrentTopicConsumer(String topic) {

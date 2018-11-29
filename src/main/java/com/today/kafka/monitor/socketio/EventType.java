@@ -8,7 +8,8 @@ import lombok.Getter;
  */
 @Getter
 public enum EventType {
-    DATA_INSERT("DATA_INSERT");
+    DATA_INSERT("DATA_INSERT"),
+    MESSAGE("MESSAGE");
 
     private String name;
 
